@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script type="text/javascript" src="js/slide.js"></script> -->
+    <script>
+        var opacity = 1;
+        var multiplier = 1;
+
+        function slideshow() {
+            var seconds = new Date().getSeconds() % 10;
+            // document.getElementById("currentTime").innerHTML = seconds + "";
+            var step = 0;
+            step *= multiplier;
+            var img = document.getElementsByName("slide");
+            var styleDefault = "visibility: visible; top: 0px; left: 0px; border: 0px; opacity: 1";
+            opacity = opacity - step;
+            img[0].setAttribute("style", styleDefault.replace("opacity: 1", "opacity: " + opacity));
+            img[1].setAttribute("style", styleDefault.replace("opacity: 1", "opacity: " + (1 - opacity)));
+//            console.log(img[0]);
+//            console.log(img[1]);
+//            console.log(opacity);
+            if (opacity <= 0 || opacity >= 1) {
+                multiplier *= -1;
+            }
+            setTimeout("slideshow()", 250);
+        }
+    </script>
+</head>
+<body onload="slideshow();">
+<div class="header">
+    <span class="text1">qwe asd</span>
+    <span class="text2">zxc</span>
+</div>
+<span id="currentTime">123</span>
+<br>
+
+<div class="slide">
+    <img name="slide" src="img/img1.jpg" width="320px"
+         style="visibility: visible; top: 0px; left: 0px; border: 0px; opacity: 1">
+    <img name="slide" src="img/img2.jpg" width="320px"
+         style="visibility: hidden; top: 0px; left: 0px; border: 0px; opacity: 1">
+    <img name="slide" src="img/img3.jpg" width="320px"
+         style="visibility: hidden; top: 0px; left: 0px; border: 0px; opacity: 1">
+</div>
+</body>
+</html>
