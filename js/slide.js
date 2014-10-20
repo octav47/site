@@ -2,9 +2,11 @@ function c(string) {
     console.log(string);
 }
 
-function slideshow() {
-    var img = document.getElementsByName("slide");
-    for (var i = 0; i < img.length; i++) {
-        c(img[i]);
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds){
+            break;
+        }
     }
 }

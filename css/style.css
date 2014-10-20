@@ -18,8 +18,11 @@ div.header {
 div.gallery,
 img {
     text-align: center;
-    position: fixed;
+    position: relative;
     margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
 }
 
 span.text1 {
@@ -28,4 +31,28 @@ span.text1 {
 
 span.text2 {
     text-shadow: 3px 0 0 #009b9b;
+}
+
+div.footer {
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #1e1e1e;
+}
+
+div.content {
+    padding-bottom: 75px;
+    color: #ffffff;
+    font-family: arial, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    font-variant: small-caps;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 10px;
+    word-spacing: 10px;
+    text-transform: uppercase;
 }
