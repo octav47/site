@@ -4,7 +4,7 @@ div.header {
     font-family: arial, serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 36pt;
     font-variant: small-caps;
     line-height: 20px;
     text-align: center;
@@ -12,7 +12,7 @@ div.header {
     word-spacing: 10px;
     text-transform: uppercase;
     border-radius: 12px 25px 12px 25px;
-    padding: 15px;
+    padding: 25px;
 }
 
 div.gallery,
@@ -42,6 +42,11 @@ div.footer {
     background-color: #1e1e1e;
 }
 
+div.footerMenu {
+    padding: 5%;
+    color: #ffffff;
+}
+
 div.content {
     padding-bottom: 75px;
     color: #ffffff;
@@ -55,4 +60,9 @@ div.content {
     letter-spacing: 10px;
     word-spacing: 10px;
     text-transform: uppercase;
+}
+
+div.contacts {
+    color: #ffffff;
+    text-align: center;
 }
