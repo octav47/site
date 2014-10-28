@@ -2,34 +2,10 @@
 <head>
     <title>Введение в DOM</title>
     <script>
-        function makeBorder(color) {
-            var borderStyle = "1px solid " + color;
-            if (color == undefined) {
-                borderStyle = "";
-            }
-            var li = document.getElementsByTagName("li");
-            for (var j = 0; j < li.length; j++) {
-                li[j].style.border = borderStyle;
-            }
-//            var every = document.getElementById("everywhere");
-//            every.parentNode.removeChild(every);
-        }
+
     </script>
 </head>
 <body>
-<h1>Введение в DOM</h1>
-
-<p class="test">Существует ряд причин по которым
-    DOM можно
-    считать превосходной моделью, и вот некоторые из них:</p>
-<ul>
-    <li id="everywhere">Ее повсюду можно найти.</li>
-    <li class="test">Она проста в использовании.</li>
-    <li class="test">Она способна помочь вам найти что угодно,
-        и с завидной быстротой.
-    </li>
-</ul>
-<button type="submit" style="text-align: center" onclick="makeBorder('red')" onmouseover="makeBorder('blue')" onmouseout="makeBorder()">Submit
-</button>
+<button>Submit</button>
 </body>
 </html>
