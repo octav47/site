@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/slide.js"></script>
+    <script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        var imgs = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg"];
+        var text = ['Картинка 1'];
+        var n = 0;
+        time = 800;
+        play = setInterval("chgImg(0)", 5000);
+
+        function chgImg(number) {
+            $('#slide').fadeOut(time, function () {    //для картинок
+                $(this).attr('src', imgs[n]).fadeIn(time);
+            });
+
+            n++;
+            if (n >= imgs.length) n = 0;
+        }
+    </script>
+</head>
+<body>
+<div class="content">
+    <div class="header">
+        <span class="text1">qwe asd</span>
+        <span class="text2">zxc</span>
+    </div>
+    <div class="slide">
+        <!-- <img id="slide" src="img/img1.jpg" style="visibility: visible; top: 0px; left: 0px; border: 0px; opacity: 1"> -->
+    </div>
+</div>
+<div class="footer">
+    <div class="contacts">
+        call me
+    </div>
+</div>
+</body>
+</html>
