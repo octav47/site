@@ -6,6 +6,60 @@
 DF9E62	C39164	B8783D	E7AC76	E7B383
 */
 
+.rectangle-list a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    *padding: .4em;
+    margin: .5em 0 .5em 2.5em;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.rectangle-list a:hover {
+    background: #eee;
+}
+
+.rectangle-list a:before {
+    /*content: counter(li);*/
+    /*counter-increment: li;*/
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: #E7B383;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rectangle-list a:after {
+    position: absolute;
+    content: '';
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.rectangle-list a:hover:after {
+    left: -.5em;
+    border-left-color: #E7B383;
+}
+
 @font-face {
     font-family: 'LigatureSymbols';
     src: url('fonts/LigatureSymbols-2.11.eot');
@@ -481,6 +535,14 @@ ol.style1 li {
 
 .icon-blogger:before {
     content: '\E165';
+}
+
+.icon-projects:before {
+    content: '\E05c';
+}
+
+.icon-flickr:before {
+    content: '\E04b';
 }
 
 /*********************************************************************************/
